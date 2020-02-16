@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "nodemon index.js & gulp watch_css",
     "build": "next build",
-    "start": "node index.js"
+    "start": "node index.js -p $PORT",
+    "heroku-postbuild": "npm run build"
   },
   "dependencies": {
     "apollo-boost": "^0.4.7",
