@@ -1,0 +1,25 @@
+enum Tags {
+  Christmas
+  Halloween
+  Valentines
+}
+
+enum QuestionType {
+  GENERAL
+  PHOTO
+  BOOLEAN
+}
+
+type Question {
+  type: QuestionType!
+  question: String!
+  answer: String!
+  wrongAnswers: [String!]!
+  season: Int
+  episode: Int
+  tags: [Tags]
+}
+
+type Query {
+  questions: [Question]
+}
